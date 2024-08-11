@@ -1,0 +1,34 @@
+.container {
+  max-width: 100%;
+  background-color: pink;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+input {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #D5D4D8;
+  text-indent: 5px;
+}
+
+.table {
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background-color: pink;
+  border-color: pink;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: pink;
+  border-color: pink;
+}
