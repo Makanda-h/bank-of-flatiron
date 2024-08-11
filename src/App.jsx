@@ -8,8 +8,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [transactions, setTransactions] = useState([]);
-  // //using the useState hook to store the transactions in the component's state.
-  // fetching the data to display using fetch API
+  // useState stores the transactions in the component's state
+  // fetching the data
   useEffect(() => {
     fetch("http://localhost:3000/transactions")
       .then((resp) => resp.json())
@@ -18,7 +18,7 @@ function App() {
         console.log(data);
       });
   }, []);
-  // function to add the new transaction to the list
+  // function to add the new transaction
   function addTransaction(newTransaction) {
     setTransactions((prevTransactions) => [
       newTransaction,
@@ -27,9 +27,9 @@ function App() {
   }
 
   return (
-    <div className="container mt-5">
-      <h1 className="mb-4">Bank Of Flatiron</h1>
-      <Form addTransaction={addTransaction} />
+    <div className="container mt-">
+      <h1 className="mb-1">Bank Of Flatiron</h1>
+      <Form addTransaction={addTransaction} /> {/* //passing in the addtransaction function as a prop */}
       <TransactionTable
         transactionDetails={transactions}
         setTransactionDetails={setTransactions}
@@ -37,7 +37,6 @@ function App() {
     </div>
   );
 }
-//passing in the addtransaction function as a prop
 
 //passing the data as a prop to transaction table
 export default App;

@@ -13,14 +13,14 @@ function Form({ addTransaction }) {
     e.preventDefault();
     const newTransaction = {
       //object holding the new inputs
-      id: Date.now(), 
+      id: Date.now(),
       category: category,
       category: category,
       amount: amount,
       description: description,
       date: date,
     };
-    addTransaction(newTransaction); //Call the addTransaction function
+    addTransaction(newTransaction); //Call the addTransaction function from app.jsx 
     setAmount("");
     setCategory("");
     setDate("");
@@ -67,5 +67,3 @@ function Form({ addTransaction }) {
 }
 
 export default Form;
-// Fill out and submit the form to add a new transaction.
-// This should add the new transaction to the table *the new transaction does not have to be persisted to the backend*
